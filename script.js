@@ -59,8 +59,6 @@ function headGenerator(number, words) {
     const newContent = `<h${number}>${words}</h${number}>`;
     return newContent;
   }
-
-  
 }
 
 
@@ -107,8 +105,8 @@ function swapWord(string) {
   const lastLetter = array.pop();
   array.unshift(lastLetter)
   array.push(firstLetter)
-  
-  return array
+  const newArray = array.toString().replaceAll(",","")
+  return newArray
 }
 
 console.log(swapWord(string))
